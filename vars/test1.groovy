@@ -13,7 +13,7 @@ def new1() {
     def x = 2
     def y = 0
     while(x > y) {
-       print "${x}"
+       println "${y}"
        y++
     }
   }
