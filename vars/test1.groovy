@@ -1,7 +1,20 @@
-def abc = "Hello"
-def xyz = 10
+def new1() {
+    print "hello"
+    def xyz = "hello"
+    print "xyz = ${xyz}"
+    print "abc = ${abc}"
 
-print "abc = ${abc}"
-print "xyz = ${xyz}"
+    if (abc == "Some Data") {
+        print "YES"
+    } else {
+        print "NO"
+    }
 
-print abc
+    def x = 2
+    def y = 0
+    while(x > y) {
+       print "${x}"
+       y++
+    }
+  }
+
