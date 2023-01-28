@@ -1,5 +1,5 @@
 def compile() {
-  if (app.lang == "nodejs") {
+  if (app_lang == "nodejs") {
     sh 'npm install'
   }
 
