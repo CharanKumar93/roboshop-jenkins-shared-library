@@ -16,8 +16,9 @@ def unittests() {
     try {
       sh 'npm test'
     } catch(Exception e) {
-      common.email("Unit tests failed")
+      email("Unit tests failed")
     }
+
   }
   if (app_lang == "maven") {
     sh 'mvn test'
@@ -27,4 +28,8 @@ def unittests() {
     sh 'python3 -m unittest'
   }
 
+}
+
+def email(email_note) {
+  println email_note
 }
