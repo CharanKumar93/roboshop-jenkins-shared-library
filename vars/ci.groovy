@@ -33,7 +33,7 @@ def call() {
                     }
                     steps {
                         script{
-                            SONAR_PASS = sh ( script: aws ssm get-parameters --region us-east-1 --names sonarqube.pass  --with-decryption --query Parameters[0].Value | ' +
+                            SONAR_PASS = sh ( script: 'aws ssm get-parameters --region us-east-1 --names sonarqube.pass  --with-decryption --query Parameters[0].Value | ' +
                                     'sed \'s/"//g\'', returnStdout: true).trim()
                             wrap([$class: 'MaskPasswordsBuildWrapper', varPasswordPairs: [[password: "${SONAR_PASS}", var:'SECRET']]]) {
                                 println "Password = ${SONAR_PASS}"
