@@ -4,6 +4,10 @@ def call() {
         env.SONAR_EXTRA_OPTS = " "
     }
 
+    if(!env.extraFiles) {
+        env.extraFiles = " "
+    }
+
     if(!env.TAG_NAME) {
         env.PUSH_CODE = " "
     } else {
