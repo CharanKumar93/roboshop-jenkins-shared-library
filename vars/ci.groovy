@@ -9,7 +9,7 @@ def call() {
     }
 
     if(!env.TAG_NAME) {
-        env.PUSH_CODE = " "
+        env.PUSH_CODE = "false"
     } else {
       env.PUSH_CODE = "true"
     }
